@@ -1,0 +1,54 @@
+﻿@page
+@model _2023ACMS.Pages.Students.MaintainStudentsModel
+@{
+    ViewData["Title"] = "Maintain Students";
+}
+
+<form method="post">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <div class="center">
+                    <input type="text" asp-for="Search" placeholder="Search Students" class="searchbar" />
+                    <input asp-page-handler="Search" type="submit" value="Search" />
+                    <input asp-page-handler="ClearSearch" type="submit" value="Clear Filter" />
+                </div>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th><a asp-page="AddStudent" class="btn">Add</a></th>
+                <th class="center"><label>Student First</label></th>
+                <th class="center"><label>Student Last</label></th>
+                <th class="center"><label>Student Email</label></th>
+                <th class="center"><label>Media Preference</label></th>
+                <th class="center"><label>Portfolio Review</label></th>
+                <th class="center"><label>Attending</label></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.StudentJoinResultIList)
+            {
+                <tr>
+                    <td>
+                        <a asp-page="ModifyStudent" asp-route-intStudentId="@item.StudentId" class="btn">Modify</a>
+                        <a asp-page="DeleteStudent" asp-route-intStudentId="@item.StudentId" class="btn"
+                       onclick="return confirm('Are you sure you want to delete @item.StudentFirstName? Click OK to delete them. Click Cancel to keep them.')">Delete</a>
+                    </td>
+                    <td class="center"><label>@item.StudentFirstName</label></td>
+                    <td class="center"><label>@item.StudentLastName</label></td>
+                    <td class="center"><label>@item.StudentEmail</label></td>
+                    <td class="center"><label>@item.MediaPreference</label></td>
+                    <td class="center"><label>@item.PortfolioReview</label></td>
+                    <td class="center"><label>@item.Attending</label></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
+

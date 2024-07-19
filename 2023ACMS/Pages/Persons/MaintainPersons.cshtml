@@ -1,0 +1,43 @@
+﻿@page
+@model _2023ACMS.Pages.Persons.MaintainPersonsModel
+@{
+    ViewData["Title"] = "Maintain Persons";
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><a asp-page="AddPerson" class="btn">Add</a></th>
+            <th><label>Last Name</label></th>
+            <th><label>First Name</label></th>
+            <th><label>Email Address</label></th>
+            <th><label>Status</label></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.JoinResultIList)
+        {
+            <tr>
+                <td>
+                    <a asp-page="ModifyPerson" asp-route-intPersonId="@item.PersonId" class="btn">Modify</a>
+                    <a asp-page="DeletePerson" asp-route-intPersonId="@item.PersonId" class="btn" 
+                        onclick="return confirm('Are you sure you want to delete @item.FirstName @item.LastName? Click OK to delete them. Click Cancel to keep them.')">Delete</a>
+                </td>
+                <td><label>@item.LastName</label></td>
+                <td><label>@item.FirstName</label></td>
+                <td><label>@item.EmailAddress</label></td>
+                <td>
+                    @{
+                        if (item.Status == "A")
+                        {
+                            <label>Admin</label>
+                        }
+                        else if (item.Status == "J"){
+                            <label>Judge</label>
+                        }
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

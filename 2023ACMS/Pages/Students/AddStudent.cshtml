@@ -1,0 +1,91 @@
+﻿@page
+@model _2023ACMS.Pages.Students.AddStudentModel
+@{
+    ViewData["Title"] = "Add Student";
+}
+
+<form method="post">
+    <table>
+        <tr>
+            <td><label asp-for="Student.StudentFirstName"></label><label>: </label></td>
+            <td>
+                <input asp-for="Student.StudentFirstName" />
+                <span asp-validation-for="Student.StudentFirstName" />
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.StudentLastName"></label><label>: </label></td>
+            <td>
+                <input asp-for="Student.StudentLastName" />
+                <span asp-validation-for="Student.StudentLastName" />
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.StudentEmail"></label><label>: </label></td>
+            <td>
+                <input asp-for="Student.StudentEmail" />
+                <span asp-validation-for="Student.StudentEmail" />
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.ParentName"></label><label>: </label></td>
+            <td>
+                <input asp-for="Student.ParentName" />
+                <span asp-validation-for="Student.ParentName" />
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.ParentEmail"></label><label>: </label></td>
+            <td>
+                <input asp-for="Student.ParentEmail" />
+                <span asp-validation-for="Student.ParentEmail" />
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.TeacherName"></label><label>: </label></td>
+            <td>
+                <input asp-for="Student.TeacherName" />
+                <span asp-validation-for="Student.TeacherName" />
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.TeacherEmail"></label><label>: </label></td>
+            <td>
+                <input asp-for="Student.TeacherEmail" />
+                <span asp-validation-for="Student.TeacherEmail" />
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.PortfolioReview"></label><label>: </label></td>
+            <td><input asp-for="Student.PortfolioReview" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.MediaPreferenceId"></label></td>
+            <td>
+                <select asp-for="Student.MediaPreferenceId">
+                    @foreach (var item in Model.JoinResultIList)
+                    {
+                        <option value="@item.MediaId">@item.MediaName</option>
+                    }  
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.Attending"></label><label>: </label></td>
+            <td><input asp-for="Student.Attending" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input asp-page-handler="Add" type="submit" value="Add" />
+                <a asp-page="CancelStudent" class="btn">Cancel</a>
+            </td>
+        </tr>
+    </table>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

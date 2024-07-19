@@ -1,0 +1,23 @@
+﻿@page
+@model _2023ACMS.Pages.Defaults.ModifyDefaultModel
+@{
+    ViewData["Title"] = "Modify Default";
+}
+
+<form method="post">
+
+    <input type="hidden" asp-for="Default.DefaultId" />
+
+    <table>
+        <tr>
+            <td><label asp-for="Default.AllowSubmissions"></label><label>: </label></td>
+            <td><input asp-for="Default.AllowSubmissions" /></td>
+        </tr>
+        <tr>
+            <td>
+                <input asp-page-handler="Modify" type="submit" value="Modify"/>
+                <a asp-page="CancelDefault" class="btn">Cancel</a>
+            </td>
+        </tr>
+    </table>
+</form>

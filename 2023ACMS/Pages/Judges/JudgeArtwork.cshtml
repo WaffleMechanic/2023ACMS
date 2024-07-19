@@ -1,0 +1,48 @@
+﻿@page
+@model _2023ACMS.Pages.Judges.JudgeArtworkModel
+@{
+    ViewData["Title"] = "Judge Artwork";
+}
+
+<form method="post">
+
+    <input type="hidden" asp-for="Artwork.ArtworkId" />
+
+    <table>
+        <tr>
+            <td><label asp-for="Artwork.Title"></label><label>: </label></td>
+            <td><label>@Model.Artwork.Title</label></td>
+            <td><input type="hidden" asp-for="Artwork.Title" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Media.Media1"></label><label>: </label></td>
+            <td><label>@Model.Media.Media1</label></td>
+            <td><input type="hidden" asp-for="Artwork.MediaId" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork.Filename"></label><label>: </label></td>
+            <td><img src="~/images/Artwork/@Model.Artwork.Filename" /></td>
+            <td><input type="hidden" asp-for="Artwork.Filename" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork.JudgeNotes"></label><label>: </label></td>
+            <td><textarea cols="50" rows="10" asp-for="Artwork.JudgeNotes"></textarea></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork.Judged"></label><label>: </label></td>
+            <td><input asp-for="Artwork.Judged" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input asp-page-handler="Judge" type="submit" value="Submit"/>
+                <a asp-page="CancelJudging" class="btn">Cancel</a>
+            </td>
+        </tr>
+    </table>
+
+    <input type="hidden" asp-for="Artwork.StudentId" />
+    <input type="hidden" asp-for="Artwork.PersonId" />
+    <input type="hidden" asp-for="Artwork.Accept" />
+           
+</form>

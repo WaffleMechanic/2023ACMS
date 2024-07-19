@@ -1,0 +1,54 @@
+﻿@page
+@model _2023ACMS.Pages.Judges.ViewArtworksModel
+@{
+    ViewData["Title"] = "View Artworks";
+}
+
+<form method="post">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <div class="center">
+                    <select asp-for="JudgedSearch" class="searchbardropdown">
+                        <option value="null">All</option>
+                        <option value="NotJudged">Not Judged</option>
+                        <option value="true">Judged</option>
+                    </select>
+                    <input type="text" asp-for="Search" placeholder="Search Artworks" class="searchbar" />
+                    <input asp-page-handler="Search" type="submit" value="Search" />
+                    <input asp-page-handler="ClearSearch" type="submit" value="Clear Filter" />
+                </div>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><label>File</label></td>
+                <td><label>Title</label></td>
+                <td><label>Judge Notes</label></td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model.JoinResultIList)
+                {
+                    if (item.Accept == true)
+                    {
+                        <tr>
+                            <td><a asp-page="JudgeArtwork" asp-route-intArtworkId="@item.ArtworkId" class="btn">Judge</a></td>
+                            <td><img src="~/images/Artwork/@item.File" style="height: 50px; width: 50px;" /></td>
+                            <td><label>@item.Title</label></td>
+                            <td><label>@item.JudgeNotes</label></td>
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+</form>
+

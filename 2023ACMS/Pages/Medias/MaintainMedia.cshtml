@@ -1,0 +1,27 @@
+﻿@page
+@model _2023ACMS.Pages.Medias.MaintainMediaModel
+@{
+    ViewData["Title"] = "Maintain Media";
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><a asp-page="AddMedia" class="btn">Add</a></th>
+            <th><label>Media Name</label></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.JoinResultIList)
+        {
+            <tr>
+                <td>
+                    <a asp-page="ModifyMedia" asp-route-intMediaId="@item.MediaId" class="btn">Modify</a>
+                    <a asp-page="DeleteMedia" asp-route-intMediaId="@item.MediaId" class="btn"
+                   onclick="return confirm('Are you sure you want to delete @item.Media1? Click OK to delete it. Click Cancel to keep it.')">Delete</a>
+                </td>
+                <td><label>@item.Media1</label></td>
+            </tr>
+        }
+    </tbody>
+</table>

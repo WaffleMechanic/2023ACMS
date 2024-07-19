@@ -1,0 +1,187 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = _2023ACMS
+build_property.RootNamespace = _2023ACMS
+build_property.ProjectDir = D:\CMP 47X Projects\2023ACMS\2023ACMS\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\CMP 47X Projects\2023ACMS\2023ACMS
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/ArtworkSubmissions/ArtworkSubmissionForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0d29ya1N1Ym1pc3Npb25zXEFydHdvcmtTdWJtaXNzaW9uRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/ArtworkSubmissions/ThankYou.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0d29ya1N1Ym1pc3Npb25zXFRoYW5rWW91LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Artworks/AddArtwork.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0d29ya3NcQWRkQXJ0d29yay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Artworks/CancelArtwork.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0d29ya3NcQ2FuY2VsQXJ0d29yay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Artworks/DeleteArtwork.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0d29ya3NcRGVsZXRlQXJ0d29yay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Artworks/MaintainArtworks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0d29ya3NcTWFpbnRhaW5BcnR3b3Jrcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Artworks/ModifyArtwork.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0d29ya3NcTW9kaWZ5QXJ0d29yay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Common/DenyAccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uXERlbnlBY2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Common/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Common/LogOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uXExvZ091dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Common/ViewWelcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbW9uXFZpZXdXZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Defaults/CancelDefault.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVmYXVsdHNcQ2FuY2VsRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Defaults/MaintainDefaults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVmYXVsdHNcTWFpbnRhaW5EZWZhdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Defaults/ModifyDefault.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVmYXVsdHNcTW9kaWZ5RGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Home/Initialize.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxJbml0aWFsaXplLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Home/ViewPrivacyPolicy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxWaWV3UHJpdmFjeVBvbGljeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Judges/CancelJudging.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSnVkZ2VzXENhbmNlbEp1ZGdpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Judges/JudgeArtwork.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSnVkZ2VzXEp1ZGdlQXJ0d29yay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Judges/ViewArtworks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSnVkZ2VzXFZpZXdBcnR3b3Jrcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Medias/AddMedia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkaWFzXEFkZE1lZGlhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Medias/CancelMedia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkaWFzXENhbmNlbE1lZGlhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Medias/DeleteMedia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkaWFzXERlbGV0ZU1lZGlhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Medias/MaintainMedia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkaWFzXE1haW50YWluTWVkaWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Medias/ModifyMedia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkaWFzXE1vZGlmeU1lZGlhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Notifications/EmailConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWZpY2F0aW9uc1xFbWFpbENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Notifications/SendAcceptanceNotifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWZpY2F0aW9uc1xTZW5kQWNjZXB0YW5jZU5vdGlmaWNhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Notifications/SendRejectionNotifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWZpY2F0aW9uc1xTZW5kUmVqZWN0aW9uTm90aWZpY2F0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Persons/AddPerson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uc1xBZGRQZXJzb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Persons/CancelPerson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uc1xDYW5jZWxQZXJzb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Persons/DeletePerson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uc1xEZWxldGVQZXJzb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Persons/MaintainPersons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uc1xNYWludGFpblBlcnNvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Persons/ModifyPerson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uc1xNb2RpZnlQZXJzb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Reports/GenerateLabels.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVwb3J0c1xHZW5lcmF0ZUxhYmVscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Students/AddStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcQWRkU3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Students/CancelStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcQ2FuY2VsU3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Students/DeleteStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRGVsZXRlU3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Students/MaintainStudents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcTWFpbnRhaW5TdHVkZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Students/ModifyStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcTW9kaWZ5U3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CMP 47X Projects/2023ACMS/2023ACMS/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fcsjbwv1hl

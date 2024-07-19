@@ -1,0 +1,58 @@
+﻿@page
+@model _2023ACMS.Pages.Artworks.MaintainArtworksModel
+@{
+    ViewData["Title"] = "Maintain Artworks";
+}
+<form method="post">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <div class="center">
+                    <select asp-for="AcceptanceSearch" class="searchbardropdown">
+                        <option value="All">All</option>
+                        <option value="Not Accepted">Not Accepted</option>
+                        <option value="Accepted">Accepted</option>
+                    </select>
+                    <input type="text" asp-for="Search" placeholder="Search Artworks" class="searchbar" />
+                    <input asp-page-handler="Search" type="submit" value="Search" />
+                    <input asp-page-handler="ClearSearch" type="submit" value="Clear Filter" />
+                </div>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th><a asp-page="AddArtwork" class="btn">Add</a></th>
+                <td><label>File</label></td>
+                <td><label>Title</label></td>
+                <td><label>Media</label></td>
+                <td><label>Student Last Name</label></td>
+                <td><label>Student First Name</label></td>
+                <td><label>Accepted</label></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.JoinResultIList)
+            {
+                <tr>
+                    <td>
+                        <a asp-page="ModifyArtwork" asp-route-intArtworkId="@item.ArtworkId" class="btn">Modify</a>
+                        <a asp-page="DeleteArtwork" asp-route-intArtworkId="@item.ArtworkId" class="btn"
+                       onclick="return confirm('Are you sure you want to delete @item.Title? Click OK to delete it. Click Cancel to keep it.')">Delete</a>
+                    </td>
+                    <td><img src="~/images/Artwork/@item.File" style="height: 50px; width: 50px;"/></td>
+                    <td><label>@item.Title</label></td>
+                    <td><label>@item.Media1</label></td>
+                    <td><label>@item.StudentLastName</label></td>
+                    <td><label>@item.StudentFirstName</label></td>
+                    <td><label>@item.Accept</label></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
+

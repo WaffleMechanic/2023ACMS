@@ -1,0 +1,63 @@
+﻿@page
+@model _2023ACMS.Pages.SendRejectionNotificationsModel
+@{
+    ViewData["Title"] = "Send Rejection Notifications";
+}
+
+<form method="post">
+    <table>
+        <tr>
+            <td></td>
+            <td>
+                @*<label>Email Address</label><br />*@
+                @{
+                    Model.EmailAddress = "RFrye@franklincollege.edu";
+
+                    if (Model.JoinResultIList != null)
+                    {
+                        foreach (var item in Model.JoinResultIList)
+                        {
+                            if (item.Judged == false)
+                            {
+                                Model.EmailAddress = Model.EmailAddress + "," + item.StudentEmail;
+                            }
+                        }
+                        <input type="hidden" asp-for="EmailAddress" />
+                    }
+                }
+                
+                <input asp-page-handler="SendRejectionNotifications" class="btn" type="submit" value="Send Notification" />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <label>Email Introduction</label><br />
+                <textarea cols="25" rows="1" asp-for="EmailIntroduction"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <label>Email Body</label><br />
+                <textarea cols="173" rows="10" asp-for="EmailBody"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <label>Email Salutation</label><br />
+                <textarea cols="25" rows="1" asp-for="EmailSalutation"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <label>Email Signature</label><br />
+                <textarea cols="25" rows="1" asp-for="EmailSignature"></textarea>
+            </td>
+        </tr>
+    </table>
+</form>
+
+

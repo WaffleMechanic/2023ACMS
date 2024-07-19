@@ -1,0 +1,172 @@
+﻿@page
+@model _2023ACMS.Pages.ArtworkSubmissionFormModel
+@{
+    ViewData["Title"] = "Artwork Submission Form";
+}
+
+<form method="post" enctype="multipart/form-data">
+    <h1>Student Information</h1>
+    <table>
+        <tr>
+            <td><label asp-for="Student.StudentFirstName"></label><label>: </label></td>
+            <td><input asp-for="Student.StudentFirstName" /></td>
+            <td><span asp-validation-for="Student.StudentFirstName" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.StudentLastName"></label><label>: </label></td>
+            <td><input asp-for="Student.StudentLastName" /></td>
+            <td><span asp-validation-for="Student.StudentLastName" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.StudentEmail"></label><label>: </label></td>
+            <td><input asp-for="Student.StudentEmail" /></td>
+            <td><span asp-validation-for="Student.StudentEmail" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.ParentName"></label><label>: </label></td>
+            <td><input asp-for="Student.ParentName" /></td>
+            <td><span asp-validation-for="Student.ParentName" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.ParentEmail"></label><label>: </label></td>
+            <td><input asp-for="Student.ParentEmail" /></td>
+            <td><span asp-validation-for="Student.ParentEmail" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.TeacherName"></label><label>: </label></td>
+            <td><input asp-for="Student.TeacherName" /></td>
+            <td><span asp-validation-for="Student.TeacherName" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.TeacherEmail"></label><label>: </label></td>
+            <td><input asp-for="Student.TeacherEmail" /></td>
+            <td><span asp-validation-for="Student.TeacherEmail" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.PortfolioReview"></label><label>: </label></td>
+            <td><input asp-for="Student.PortfolioReview" type="checkbox" /></td>
+            <td><span asp-validation-for="Student.PortfolioReview" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.MediaPreferenceId"></label><label>: </label></td>
+            <td>
+                <select asp-for="Student.MediaPreferenceId">
+                    @foreach (var item in Model.JoinResultIList)
+                    {
+                        <option value="@item.MediaId">@item.MediaName</option>
+                    }  
+                </select>
+            </td>
+            <td><span asp-validation-for="Student.MediaPreferenceId" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Student.Attending"></label><label>: </label></td>
+            <td><input asp-for="Student.Attending" type="checkbox" /></td>
+            <td><span asp-validation-for="Student.Attending" /></td>
+        </tr>
+    </table>
+
+    <h1>Artwork Information</h1>
+    @*Artwork 01*@
+    <table>
+        <tr><td><h4>Artwork One</h4></td></tr>
+        <tr>
+            <td><label asp-for="Artwork.Title"></label><label>: </label></td>
+            <td><input asp-for="Artwork.Title" /></td>
+            <td><span asp-validation-for="Artwork.Title" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork.Filename"></label><label>: </label></td>
+            <td><input asp-for="ArtworkImage" id="filFile" onchange="DisplayFile();" type="file" class="form-control" /></td>
+            <td><span asp-validation-for="Artwork.Filename" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork.Media"></label><label>: </label></td>
+            <td>
+                <select asp-for="Artwork.MediaId">
+                    @foreach (var item in Model.JoinResultIList)
+                    {
+                        <option value="@item.MediaId">@item.MediaName</option>
+                    }
+                </select>
+            </td>
+            <td><span asp-validation-for="Artwork.MediaId" /></td>
+        </tr>
+    </table><br />
+    @*Artwork 02*@
+    <table style="display:none" id="Artwork02title">
+        <tr><td><h4>Artwork Two</h4></td></tr>
+        <tr>
+            <td><label asp-for="Artwork02.Title"></label><label>: </label></td>
+            <td><input asp-for="Artwork02.Title" /></td>
+            <td><span asp-validation-for="Artwork.Title" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork02.Filename"></label><label>: </label></td>
+            <td><input asp-for="ArtworkImage02" type="file" class="form-control" /></td>
+            <td><span asp-validation-for="Artwork.Filename" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork.Media"></label><label>: </label></td>
+            <td>
+                <select asp-for="Artwork02.MediaId">
+                    @foreach (var item in Model.JoinResultIList)
+                    {
+                        <option value="@item.MediaId">@item.MediaName</option>
+                    }
+                </select>
+            </td>
+            <td><span asp-validation-for="Artwork.MediaId" /></td>
+        </tr>
+    </table><br />
+    @*Artwork 03*@
+    <table style="display:none" id="Artwork03title">
+        <tr><td><h4>Artwork Three</h4></td></tr>
+        <tr>
+            <td><label asp-for="Artwork03.Title"></label><label>: </label></td>
+            <td><input asp-for="Artwork03.Title" /></td>
+            <td><span asp-validation-for="Artwork.Title" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork03.Filename"></label><label>: </label></td>
+            <td><input asp-for="ArtworkImage03" type="file" class="form-control" /></td>
+            <td><span asp-validation-for="Artwork.Filename" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork.Media"></label><label>: </label></td>
+            <td>
+                <select asp-for="Artwork03.MediaId">
+                    @foreach (var item in Model.JoinResultIList)
+                    {
+                        <option value="@item.MediaId">@item.MediaName</option>
+                    }
+                </select>
+            </td>
+            <td><span asp-validation-for="Artwork.MediaId" /></td>
+        </tr>
+    </table><br />
+
+    <table>
+        <tr>
+            <td>
+                <input onclick="HideShowArtwork();" type="button" value="Add Artwork" class="btn" style="width: 450px; height: 35px; text-align: center; background-color:cornflowerblue" />
+            </td>
+        </tr>
+        <tr><td></td></tr>
+        <tr>
+            <td>
+                <br />
+                <input asp-page-handler="Submit" type="submit" value="Submit" class="btn" />
+                <a asp-page="CancelStudent" class="btn">Cancel</a>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<script type="text/javascript" src="~/js/site.js"></script>  
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

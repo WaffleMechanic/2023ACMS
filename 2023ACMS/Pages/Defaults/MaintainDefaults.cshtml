@@ -1,0 +1,25 @@
+﻿@page
+@model _2023ACMS.Pages.Defaults.MaintainDefaultsModel
+@{
+    ViewData["Title"] = "Maintain Defaults";
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th><label>Allow Submissions</label></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.JoinResultIList)
+        {
+            <tr>
+                <td>
+                    <a asp-page="ModifyDefault" asp-route-intDefaultId="@item.DefaultId" class="btn">Modify</a>
+                </td>
+                <td><label>@item.AllowSubmissions</label></td>
+            </tr>
+        }
+    </tbody>
+</table>

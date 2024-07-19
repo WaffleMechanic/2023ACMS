@@ -1,0 +1,56 @@
+﻿@page
+@model _2023ACMS.Pages.Persons.ModifyPersonModel
+@{
+    ViewData["Title"] = "Modify Person";
+}
+
+<form method="post">
+
+    <input type="hidden" asp-for="Person.PersonId" />
+
+    <table>
+        <tr>
+            <td><label asp-for="Person.FirstName"></label><label>: </label></td>
+            <td>
+                <input asp-for="Person.FirstName"/>
+                <span asp-validation-for="Person.FirstName" />
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Person.LastName"></label><label>: </label></td>
+            <td>
+                <input asp-for="Person.LastName" />
+                <span asp-validation-for="Person.LastName" />
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Person.EmailAddress"></label><label>: </label></td>
+            <td>
+                <input asp-for="Person.EmailAddress" />
+                <span asp-validation-for="Person.EmailAddress" />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Status</label><label>: </label></td>
+            <td>
+                <select asp-for="Person.Status">
+                    <option value="A">Admin</option>
+                    <option value="J">Judge</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input asp-page-handler="Modify" type="submit" value="Modify"/>
+                <a asp-page="CancelPerson" class="btn">Cancel</a>
+            </td>
+        </tr>
+    </table>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

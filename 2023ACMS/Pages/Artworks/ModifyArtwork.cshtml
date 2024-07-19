@@ -1,0 +1,81 @@
+﻿@page
+@model _2023ACMS.Pages.Artworks.ModifyArtworkModel
+@{
+    ViewData["Title"] = "Modify Artwork";
+}
+
+<form method="post"> 
+
+    <input type="hidden" asp-for="Artwork.ArtworkId" />
+
+    <table>
+        <tr>
+            <td><label asp-for="Artwork.StudentId"></label><label>: </label></td>
+            <td>
+                <select asp-for="Artwork.StudentId">
+                    @foreach (var item in Model.StudentJoinResultIList)
+                    {
+                        <option value="@item.StudentId">@item.StudentLastName</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork.MediaId"></label><label>: </label></td>
+            <td>
+                <select asp-for="Artwork.MediaId">
+                    @foreach (var item in Model.MediaJoinResultIList)
+                    {
+                        <option value="@item.MediaId">@item.MediaName</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork.PersonId"></label><label>: </label></td>
+            <td>
+                <select asp-for="Artwork.PersonId">
+                    @foreach (var item in Model.PersonJoinResultIList)
+                    {
+                        <option value="@item.PersonId">@item.PersonFirstName</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork.Title"></label><label>: </label></td>
+            <td>
+                <input asp-for="Artwork.Title" />
+                <span asp-validation-for="Artwork.Title" />
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork.Filename"></label><label>: </label></td>
+            <td>
+                <img src="~/images/Artwork/@Model.Artwork.Filename" />
+                <input asp-for="Artwork.Filename" type="text" style="display:none" />
+                <span asp-validation-for="Artwork.Filename" />
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Artwork.Accept"></label><label>: </label></td>
+            <td>
+                <input asp-for="Artwork.Accept" type="checkbox" />
+                <span asp-validation-for="Artwork.Accept" />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input asp-page-handler="Modify" type="submit" value="Modify" />
+                <a asp-page="CancelArtwork" class="btn">Cancel</a>
+            </td>
+        </tr>
+    </table>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

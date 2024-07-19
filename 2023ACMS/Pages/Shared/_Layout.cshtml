@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - 2023ACMS</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/_2023ACMS.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Login"><img src="~/images/Department_of_Art_Blue.png" width="200" height="95" /><br /><font size="3"></font></a>
+                <label class ="navbar-brand">2023ACMS</label>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                @switch (@Context.Session.GetString("Status"))
+                {
+                    case "Admin":
+                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Maintain
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" asp-page="/Persons/MaintainPersons">Persons</a>
+                                        <a class="dropdown-item" asp-page="/Artworks/MaintainArtworks">Artworks</a>
+                                        <a class="dropdown-item" asp-page="/Defaults/MaintainDefaults">Defaults</a>
+                                        <a class="dropdown-item" asp-page="/Medias/MaintainMedia">Media</a>
+                                        <a class="dropdown-item" asp-page="/MediaSpecialties/MaintainMediaSpecialties">Media Specialties</a>
+                                        <a class="dropdown-item" asp-page="/Students/MaintainStudents">Students</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Notifications
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" asp-page="/Notifications/SendAcceptanceNotifications">Acceptance</a>
+                                        <a class="dropdown-item" asp-page="/Notifications/SendRejectionNotifications">Rejection</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Other
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" asp-page="/ArtworkSubmissions/ArtworkSubmissionForm">Submit Artwork</a>
+                                        <a class="dropdown-item" asp-page="/Judges/ViewArtworks">View Artwork</a>
+                                        <a class="dropdown-item" asp-page="/Reports/GenerateLabels">Generate Labels</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Common/LogOut">Log Out</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Home/ViewPrivacyPolicy">Privacy</a>
+                                </li>
+                            </ul>
+                        </div>
+                        break;
+
+                    case "Judge":
+                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Judges/ViewArtworks">View Artwork</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Common/LogOut">Log Out</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Home/ViewPrivacyPolicy">Privacy</a>
+                                </li>
+                            </ul>
+                        </div>
+                        break;
+                }
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <label class="ml-auto my-0">@Context.Session.GetString("EmailAddress") (@Context.Session.GetString("Status"))</label>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="jumbotron" style="background-color:lightgray">
+            <h5>@ViewData["Title"]</h5>
+            <label>Message: </label>
+            <label style="color:@Model.MessageColor">@Model.Message</label>
+        </div><br />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            Contact Information: Dr. Robert Beasley - rbeasley@franklincollege.edu<br />
+            Version: 1.0<br />
+            2023ACMS - <a asp-area="" asp-page="/Home/ViewPrivacyPolicy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

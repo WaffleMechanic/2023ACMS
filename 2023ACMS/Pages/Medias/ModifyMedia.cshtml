@@ -1,0 +1,33 @@
+﻿@page
+@model _2023ACMS.Pages.Medias.ModifyMediaModel
+@{
+    ViewData["Title"] = "Modify Media";
+}
+
+<form method="post">
+
+    <input type="hidden" asp-for="Media.MediaId" />
+
+    <table>
+        <tr>
+            <td><label asp-for="Media.Media1"></label><label>: </label></td>
+            <td>
+                <input asp-for="Media.Media1" />
+                <span asp-validation-for="Media.Media1" />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input asp-page-handler="Modify" type="submit" value="Modify"/>
+                <a asp-page="CancelMedia" class="btn">Cancel</a>
+            </td>
+        </tr>
+    </table>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

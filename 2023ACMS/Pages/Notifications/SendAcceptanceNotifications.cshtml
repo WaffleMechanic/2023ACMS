@@ -1,0 +1,69 @@
+﻿@page
+@model _2023ACMS.Pages.SendAcceptanceNotificationsModel
+@{
+    ViewData["Title"] = "Send Acceptance Notifications";
+}
+
+<form method="post">
+    <table>
+        <tr>
+            <td></td>
+            <td>
+                @*<label>Email Address</label><br />*@
+                @{
+                    Model.EmailAddress = "RFrye@franklincollege.edu";
+                    Model.Title = "Artwork Title";
+
+                    if (Model.JoinResultIList != null)
+                    {
+                        foreach (var item in Model.JoinResultIList)
+                        {
+                            if (item.Judged == true)
+                            {
+                                Model.EmailAddress = Model.EmailAddress + "," + item.StudentEmail;
+                                Model.Title = Model.Title + "," + item.Title;
+                            }
+                            else
+                            {
+                            }
+                        }
+                        <input type="hidden" asp-for="EmailAddress" />
+                        <input type="hidden" asp-for="Title" />
+                    }
+                }
+                
+                <input asp-page-handler="SendAcceptanceNotifications" class="btn" type="submit" value="Send Notification" />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <label>Email Introduction</label><br />
+                <textarea cols="25" rows="1" asp-for="EmailIntroduction"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <label>Email Body</label><br />
+                <textarea cols="173" rows="10" asp-for="EmailBody"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <label>Email Salutation</label><br />
+                <textarea cols="25" rows="1" asp-for="EmailSalutation"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <label>Email Signature</label><br />
+                <textarea cols="25" rows="1" asp-for="EmailSignature"></textarea>
+            </td>
+        </tr>
+    </table>
+</form>
+
+

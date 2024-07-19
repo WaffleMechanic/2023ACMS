@@ -1,0 +1,97 @@
+﻿/* element selectors at the top. classes at the bottom. MAKE SURE it is in alphabetical order.Look at xxsite for this.*/
+
+/* Element selectors go here. They are used when the formatting /*
+/* is to be applied to an HTML element universally. */
+
+body {
+    margin-bottom: 60px;
+}
+
+html {
+    font-size: 14px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+input[type=button],
+input[type=submit] {
+    background-color: #BF5841;
+    border: 1px solid transparent;
+    border-color: darkgray;
+    border-radius: 0.25rem;
+    color: white;
+    height: 2.30rem;
+    padding: 0.375rem 0.75rem;
+}
+
+input[type=button]:hover,
+input[type=submit]:hover {
+    background-color: palevioletred;
+    transition: background-color 0.25s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Class selectors go here. They are used when the formatting /*
+/* is not to be applied to an HTML element universally. */
+
+.btn {
+    /* The btn and btn-primary styles were copied from the Bootstrap file, */
+    /* combined, and modified to create a custom btn class. This was necessary */
+    /* to override the Bootstrap styles here. */
+    background-color: #BF5841;
+    border: 1px solid transparent;
+    border-color: darkgray;
+    border-radius: 0.25rem;
+    color: white;
+    font-size: 1rem;
+    height: 2.30rem;
+    margin-top: -4px;
+    padding: 0.375rem 0.75rem;
+    text-decoration: none;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.btn:hover {
+    background-color: palevioletred;
+    color: white;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block !important;
+    margin-top: 0; /* Remove the top margin so the submenus don't annoyingly close. */
+}
+
+.jumbotron {
+    padding: 0.375rem 0.75rem;
+}
+
+.searchbar {
+    height: 2.30rem;
+    width: 500px;
+}
+
+.searchbardropdown {
+    height: 2.30rem;
+}
+
+.stackedbtn {
+    margin-top: 5px;
+    padding: 0.3rem 0.9rem;
+}

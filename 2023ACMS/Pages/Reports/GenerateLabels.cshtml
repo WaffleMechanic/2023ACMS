@@ -1,0 +1,55 @@
+﻿@page
+@model _2023ACMS.Pages.Reports.GenerateLabelsModel
+@{
+    ViewData["Title"] = "Generate Labels";
+}
+
+<table class="table">
+    <thead>
+        <tr></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input onclick="print();" type="button" value="Print Labels" /></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            @{
+                var i = 0;
+
+                foreach (var item in Model.JoinResultIList)
+                {
+                    if(item.Attending == true && item.Accepted == true)
+                    {
+                        //Every three items a new row is created.
+                        if (i == 2)
+                        {
+
+                            <td>
+                                <label>Title: </label><label>@item.Title</label><br>
+                                <label>Media: </label><label>@item.Media</label><br>
+                                <label>Name: </label><label>@item.FirstName @item.LastName</label>
+                            </td>
+                                
+                            <tr></tr>
+
+                            i = 0;
+                        }
+                        else
+                        {
+                            <td>
+                                <label>Title: @item.Title</label><br>
+                                <label>Media: @item.Media</label><br>
+                                <label>Name: @item.FirstName @item.LastName</label>
+                            </td>
+
+                            i++;
+                        }
+                    }
+                }
+            }
+        </tr>  
+    </tbody>
+</table>
+
